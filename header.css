@@ -28,10 +28,6 @@ body {
     position: relative;
 }
 
-.header-left {
-    flex-shrink: 0;
-}
-
 .logo {
     text-decoration: none;
     color: rgb(238, 238, 238);
@@ -45,7 +41,7 @@ body {
 
 .primary-nav {
     flex: 1;
-    margin-left: 12px;
+    margin-left: 20px;
 }
 
 .nav-list {
@@ -105,12 +101,12 @@ body {
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
-.nav-list a span[aria-hidden="true"] {
+.nav-list a span {
     font-size: 16px;
     margin-left: 8px;
     transition: transform 0.2s ease;
 }
 
-.nav-list a:hover span[aria-hidden="true"] {
+.nav-list a:hover span {
     transform: rotate(180deg);
 }
