@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.site-header {
+    background-color: #000;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.header-inner {
+    max-width: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 320px;
+    height: 64px;
+    position: relative;
+}
+
+.header-left {
+    flex-shrink: 0;
+}
+
+.logo {
+    text-decoration: none;
+    color: rgb(238, 238, 238);
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.logo-text {
+    font-family: sans-serif;
+}
+
+.primary-nav {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list a:not(.btn-register) {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 24px;
+    transition: 0.2s;
+}
+
+.nav-list a:not(.btn-register):hover {
+    background-color: rgba(189, 189, 189, 0.233);
+}
+
+.header-lang {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.header-lang svg {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-register {
+    background-color: white;
+    color: black !important;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.btn-register:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.nav-list a span[aria-hidden="true"] {
+    font-size: 16px;
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+
+.nav-list a:hover span[aria-hidden="true"] {
+    transform: rotate(180deg);
+}
