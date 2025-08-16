@@ -15,6 +15,7 @@ body {
     color: white;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .header-inner {
@@ -107,6 +108,11 @@ body {
     transition: transform 0.2s ease;
 }
 
-.nav-list a:hover span {
+.arrow-icon {
+    display: inline-block;
+    transform-origin: center;
+}
+
+li a:hover .arrow-icon {
     transform: rotate(180deg);
 }

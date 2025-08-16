@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uber</title>
+    <title>Tjäna pengar som förare eller betsäll en resa nu | Uber Sverige</title>
     <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="footer.css">
 </head>
 
@@ -27,7 +27,9 @@
                     <li><a href="drive">Köra</a></li>
                     <li><a href="business">Verksamhet</a></li>
                     <li><a href="ubereats">Uber Eats</a></li>
-                    <li><a href="about">Om <span aria-hidden="true">▾</span></a></li>
+                    <li><a href="about">Om <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                            </svg></a></li>
                 </ul>
             </nav>
 
@@ -35,7 +37,7 @@
                 <ul class="nav-list">
                     <li>
                         <a class="header-lang" href="language">
-                            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24">
                                 <path fill="currentColor"
                                     d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 2.06c.33.14.66.3.98.48-.22.52-.4 1.06-.55 1.62l-1.86.07a22.5 22.5 0 00-.15-3.17c.4-.03.8-.01 1.58-.02zM6.2 5.5c.58.36 1.16.8 1.72 1.31l-1.12 1.4A8 8 0 006.2 5.5zM4.47 11h2.8c.08.72.2 1.44.35 2.14l-2.15.08A8.04 8.04 0 004.47 11zM12 20a7.9 7.9 0 01-3.3-.7l1.06-1.6c.96.28 1.96.42 2.98.42.98 0 1.95-.13 2.87-.37l1.03 1.56A8 8 0 0112 20z" />
                             </svg>
@@ -50,7 +52,252 @@
         </div>
     </header>
     <main>
+        <section class="ride-section" aria-label="ride-section">
+            <div class="ride-container">
 
+                <div class="ride-wrapper">
+                    <p class="ride-location">
+                        <svg class="ride-svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12 2a8 8 0 0 1 8 8c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 8-8zm0 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        </svg>
+                        <span>Göteborg, SE</span>
+                        <a href="#change-city" class="city-change">Ändra stad</a>
+                    </p>
+
+                    <h1 id="ride-title" class="ride-title">
+                        Res vart du vill<br />med Uber
+                    </h1>
+
+                    <form class="ride-form">
+                        <div class="ride-field">
+                            <div class="input-row">
+                                <span class="input-icon">
+                                    <svg width="14" height="14" viewBox="0 0 14 14">
+                                        <circle cx="7" cy="7" r="4" fill="currentColor"></circle>
+                                    </svg>
+                                </span>
+                                <input id="pickup" name="pickup" type="text" placeholder="Upphämtningsplats" />
+                                <button class="input-action" type="button" aria-label="Använd aktuell plats">
+                                    <svg width="38" height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M3 12l18-9-9 18-1.7-6.3L3 12z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="ride-field">
+                            <div class="input-row">
+                                <span class="input-icon">
+                                    <svg width="18" height="18" viewBox="0 0 14 14">
+                                        <rect x="3.5" y="3.5" width="7" height="7" fill="currentColor"></rect>
+                                    </svg>
+                                </span>
+                                <input id="dropoff" name="dropoff" type="text" placeholder="Avlämningsplats" />
+                            </div>
+                        </div>
+
+                        <div class="date-wrapper">
+                            <div class="date-field">
+                                <label for="date">Datum</label>
+                                <div class="date-select">
+                                    <svg class="calender-icon" width="16" height="16" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M7 2h2v3h6V2h2v3h3v17H2V5h3V2h2v3zm13 7H4v11h16V9z" />
+                                    </svg>
+                                    <input id="day" name="day" type="text" placeholder="Idag" />
+                                </div>
+                            </div>
+                            <div class="date-field">
+                                <label for="time">Tid</label>
+                                <div class="date-select">
+                                    <svg class="clock-icon" width="16" height="16" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm1 5h-2v6l5 3 .9-1.8-3.9-2.2V7z" />
+                                    </svg>
+                                    <input id="time-input" name="time" type="text" placeholder="Nu" />
+                                    <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cta-row">
+                            <button type="submit" class="btn-primary">Se priser</button>
+                            <a href="#login" class="recent-link">Logga in för att visa din senaste aktivitet</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="ride-media">
+                    <img src="Icons/uber-ride-media.webp" alt="" width="720" height="480" />
+                </div>
+
+            </div>
+        </section>
+        <section class="suggest-section" aria-label="suggest-section">
+            <div class="suggest-container">
+                <h2 id="suggest-title">Förslag</h2>
+
+                <ul class="suggest-grid">
+                    <li class="suggest-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Res</h3>
+                            <p class="card-text">
+                                Res vart du vill med Uber. Beställ resa, stig in och åk iväg.
+                            </p>
+                            <a class="card-cta" href="ride">Mer information</a>
+                        </div>
+                        <div class="card-media">
+                            <img src="Icons/Uber-car.png" alt="Vit bil" width="220" height="140" />
+                        </div>
+                    </li>
+
+                    <li class="suggest-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Reservera</h3>
+                            <p class="card-text">
+                                Reservera din resa i förväg så att du kan koppla av på resdagen.
+                            </p>
+                            <a class="card-cta" href="reserve">Mer information</a>
+                        </div>
+                        <div class="card-media">
+                            <img src="Icons/Uber-calender.png" alt="Kalender och klocka" width="220" height="140" />
+                        </div>
+                    </li>
+
+                    <li class="suggest-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Bud</h3>
+                            <p class="card-text">
+                                Uber gör leveranser av objekt samma dag enklare än någonsin.
+                            </p>
+                            <a class="card-cta" href="courier">Mer information</a>
+                        </div>
+                        <div class="card-media">
+                            <img src="Icons/Uber-courier.png" alt="Kurir med paket" width="220" height="140" />
+                        </div>
+                    </li>
+
+                    <li class="suggest-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Ät</h3>
+                            <p class="card-text">
+                                Beställ leverans från lokala restauranger med Uber Eats.
+                            </p>
+                            <a class="card-cta" href="eat">Mer information</a>
+                        </div>
+                        <div class="card-media">
+                            <img src="Icons/Uber-food.png" alt="Skål med mat och dryck" width="220" height="140" />
+                        </div>
+                    </li>
+
+                    <li class="suggest-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Livsmedel</h3>
+                            <p class="card-text">
+                                Få matvaror levererade till dörren med Uber Eats.
+                            </p>
+                            <a class="card-cta" href="grocery">Mer information</a>
+                        </div>
+                        <div class="card-media">
+                            <img src="Icons/Uber-grocery.png" alt="Varukorg med matvaror" width="220" height="140" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="reserve-section" aria-label="reserve-title">
+            <div class="reserve-primary-container">
+                <h2 class="reserve-title">Planera till senare</h2>
+
+                <div class="reserve-grid">
+                    <div class="reserve-container">
+                        <div class="reserve-copy">
+                            <h3 class="reserve-headline">
+                                Res stressfritt med<br>Uber Reserve
+                            </h3>
+
+                            <p class="reserve-sub">Välj tid och datum</p>
+
+                            <form class="reserve-form">
+                                <div class="reserve-wrapper">
+                                    <div class="reserve-wrapper-field">
+                                        <label for="reserve-date">Datum</label>
+                                        <div class="reserve-input">
+                                            <svg class="calender-icon" width="32" height="32" viewBox="0 0 24 24">
+                                                <path fill="currentColor"
+                                                    d="M7 2h2v3h6V2h2v3h3v17H2V5h3V2h2v3zm13 7H4v11h16V9z" />
+                                            </svg>
+                                            <input id="reserve-date" name="date" type="text" placeholder="Datum"
+                                                autocomplete="off">
+                                        </div>
+                                    </div>
+
+                                    <div class="reserve-mini-field">
+                                        <label for="reserve-time">Tid</label>
+                                        <div class="reserve-input">
+                                            <svg class="clock-icon" width="38" height="38" viewBox="0 0 24 24">
+                                                <circle cx="12" cy="12" r="5" fill="currentColor" />
+                                            </svg>
+                                            <input id="reserve-time" name="time" type="text" placeholder="Tid">
+                                            <svg class="arrow-icon" width="38" height="38" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="reserve-btn">Nästa</button>
+                            </form>
+                        </div>
+
+                        <div class="reserve-media">
+                            <img src="Icons/Uber-clock-reserve" alt="" width="620" height="420">
+                        </div>
+                    </div>
+
+                    <aside class="reserve-benefits" aria-label="benefits-title">
+                        <h3 class="benefits-title">Förmåner</h3>
+
+                        <ul class="benefit-list">
+                            <li class="benefit-item">
+                                <span class="calender-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M7 2h2v3h6V2h2v3h3v17H2V5h3V2h2v3zm13 7H4v11h16V9z" />
+                                    </svg>
+                                </span>
+                                <p>Välj din exakta upphämtningstid upp till 90 dagar i förväg.</p>
+                            </li>
+
+                            <li class="benefit-item">
+                                <span class="clock-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5h-2v6l5 3 .9-1.8-3.9-2.2V7z" />
+                                    </svg>
+                                </span>
+                                <p>Extra väntetid ingår när du ska möta upp föraren.</p>
+                            </li>
+
+                            <li class="benefit-item">
+                                <span class="card-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24">
+                                        <rect x="4" y="7" width="16" height="2" fill="currentColor" />
+                                        <rect x="4" y="15" width="16" height="2" fill="currentColor" />
+                                    </svg>
+                                </span>
+                                <p>Avboka utan kostnad upp till 60 minuter före utsatt tid.</p>
+                            </li>
+                        </ul>
+
+                        <a href="benefits" class="benefits-terms">Visa villkor</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="site-footer">
         <a href="apps" class="footer-appinfo">Så fungerar Uber- och Uber Eats-apparna och webbplatserna</a>
@@ -152,7 +399,7 @@
 
             <div class="footer-selectors">
                 <a class="footer-language" href="language">
-                    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24">
                         <path fill="currentColor"
                             d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 2.06c.33.14.66.3.98.48-.22.52-.4 1.06-.55 1.62l-1.86.07a22.5 22.5 0 00-.15-3.17c.4-.03.8-.01 1.58-.02zM6.2 5.5c.58.36 1.16.8 1.72 1.31l-1.12 1.4A8 8 0 006.2 5.5zM4.47 11h2.8c.08.72.2 1.44.35 2.14l-2.15.08A8.04 8.04 0 004.47 11zM12 20a7.9 7.9 0 01-3.3-.7l1.06-1.6c.96.28 1.96.42 2.98.42.98 0 1.95-.13 2.87-.37l1.03 1.56A8 8 0 0112 20z" />
                     </svg>
@@ -160,7 +407,7 @@
                 </a>
                 <a class="footer-city" href="city">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path fill="currentColor" d="M20 11c0 5-8 10-8 10S4 16 4 11a8 8 0 1 1 16 0Z" />
                         <circle cx="12" cy="11" r="3" />
                     </svg>

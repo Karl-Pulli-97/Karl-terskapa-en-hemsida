@@ -1,0 +1,426 @@
+.ride-section {
+    background: #fff;
+    color: #111;
+    padding: 48px 16px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.ride-container {
+    max-width: 1160px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.ride-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+    margin: 0 0 10px;
+}
+
+.city-change {
+    color: #111;
+    font-weight: 400;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+.ride-title {
+    margin: 0 0 16px;
+    font-size: 52px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+
+.ride-form {
+    margin-top: 8px;
+    max-width: 400px;
+}
+
+.ride-field {
+    margin-bottom: 16px;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f6f6f6;
+    border-radius: 8px;
+    padding: 10px 8px;
+}
+
+.input-row input {
+    flex: 1;
+    background: transparent;
+    font-size: 16px;
+    color: #111;
+    border: none;
+}
+
+.input-action {
+    border: 0;
+    background: transparent;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #111;
+}
+
+.date-wrapper {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.date-field {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.date-field .date-select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.date-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 48px;
+    width: 100%;
+    justify-content: flex-start;
+    background: #f6f6f6;
+    color: #111;
+    border-radius: 8px;
+    padding: 0 12px;
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box;
+}
+
+.date-select input {
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    color: #111;
+    font-size: 16px;
+}
+
+.date-select .arrow-icon {
+    margin-left: auto;
+}
+
+.cta-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 12px;
+    flex-wrap: nowrap;
+}
+
+.btn-primary {
+    background: #111;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    padding: 16px 26px;
+    margin-right: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+.btn-primary:hover {
+    background: #242424;
+}
+
+.recent-link {
+    font-size: 18px;
+    color: #333;
+    text-underline-offset: 8px;
+    flex: 1 1 auto;
+    white-space: nowrap;
+    text-decoration: none;
+    background:
+        linear-gradient(to right, #333, #333) left bottom / 0 1px no-repeat,
+        linear-gradient(#979797, #979797) left bottom / 100% 1px no-repeat;
+    transition: background-size .35s ease;
+}
+
+.recent-link:hover {
+
+    background-size: 100% 1px, 100% 1px;
+}
+
+.ride-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.suggest-section .suggest-container {
+    max-width: 1160px;
+    margin: 36px auto 0;
+}
+
+.suggest-section #suggest-title {
+    margin: 0 0 32px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 1.1;
+}
+
+.suggest-section .suggest-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.suggest-section .suggest-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    min-height: 160px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+
+.suggest-section .card-title {
+    margin: 0 0 6px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #111;
+}
+
+.suggest-section .card-text {
+    margin: 0 0 14px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.suggest-section .card-cta {
+    display: inline-block;
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.suggest-section .card-cta:hover {
+    background: #e2e0e0;
+}
+
+.suggest-section .card-media {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.suggest-section .card-media img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.reserve-section {
+    padding: 24px 16px 64px;
+    margin: 100px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+.reserve-section .reserve-primary-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-inline: 16px;
+}
+
+.reserve-section .reserve-title {
+    margin: 0 0 32px;
+    font-size: 36px;
+    font-weight: 650;
+    line-height: 1.1;
+}
+
+.reserve-section .reserve-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.95fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.reserve-section .reserve-container {
+    position: relative;
+    display: block;
+    background: #a3d0db;
+    border-radius: 12px;
+    padding: 46px 50px;
+    min-height: 400px;
+    min-width: 760px;
+    overflow: hidden;
+}
+
+.reserve-section .reserve-headline {
+    margin: 0 0 28px;
+    font-size: 34px;
+    font-weight: 680;
+}
+
+.reserve-section .reserve-sub {
+    margin: 0 0 8px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 620;
+}
+
+.reserve-section .reserve-form {
+    max-width: 360px;
+    margin-top: 6px;
+}
+
+.reserve-form :hover {
+    cursor: pointer;
+}
+
+.reserve-section .reserve-wrapper {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.reserve-section .reserve-wrapper-field,
+.reserve-section .reserve-mini-field {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.reserve-section .reserve-wrapper-field>label,
+.reserve-section .reserve-mini-field>label {
+    display: block;
+    font-size: 16px;
+    color: #575757;
+}
+
+.reserve-section .reserve-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 52px;
+    padding: 0 14px;
+    background: #f6f6f6;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.reserve-section .reserve-input input {
+    flex: 1 1 auto;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    color: #111;
+    padding: 0;
+}
+
+.reserve-section .reserve-input input::placeholder {
+    color: #777;
+}
+
+.reserve-section .reserve-btn {
+    display: inline-block;
+    width: 100%;
+    background: #000000;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.reserve-section .reserve-btn:hover {
+    background: #333333;
+}
+
+.reserve-section .reserve-media {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.reserve-section .reserve-media img {
+    width: 260px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.reserve-section .reserve-benefits {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 8px;
+    margin: 0;
+    align-self: start;
+}
+
+.reserve-section .benefits-title {
+    font-size: 20px;
+    font-weight: 650;
+}
+
+.reserve-section .benefit-list {
+    margin: 0 0 0 18px;
+    padding: 8px;
+    list-style: none;
+}
+
+.reserve-section .benefit-item {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.reserve-section .benefit-item:last-child {
+    border-bottom: 0;
+}
+
+.reserve-section .benefit-item p {
+    font-size: 16px;
+    font-weight: 495;
+    color: #222;
+}
+
+.reserve-section .benefits-terms {
+    display: inline-block;
+    margin: 4px 4px;
+    color: #413f3f;
+    text-decoration: underline dotted currentColor 1px;
+    text-underline-offset: 6px;
+}
