@@ -175,7 +175,7 @@
     margin: 36px auto 0;
 }
 
-.suggest-section #suggest-title {
+.suggest-section .suggest-title {
     margin: 0 0 32px;
     font-weight: 700;
     font-size: 38px;
@@ -227,6 +227,10 @@
 
 .suggest-section .card-cta:hover {
     background: #e2e0e0;
+}
+
+.suggest-card :hover {
+    cursor: pointer;
 }
 
 .suggest-section .card-media {
@@ -423,4 +427,218 @@
     color: #413f3f;
     text-decoration: underline dotted currentColor 1px;
     text-underline-offset: 6px;
+}
+
+@media (max-width: 900px) {
+
+    .ride-section {
+        padding: 28px 28px;
+    }
+
+    .ride-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 0 auto;
+    }
+
+    .ride-location {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin: 0 0 8px;
+        gap: 6px;
+    }
+
+    .ride-title {
+        font-size: 40px;
+        line-height: 1.05;
+        margin: 0 0 12px;
+        font-weight: 600;
+    }
+
+    .ride-media {
+        display: none;
+    }
+
+    .ride-form {
+        margin-top: 4px;
+        max-width: none;
+        width: 100%;
+    }
+
+    .ride-field {
+        margin-bottom: 10px;
+    }
+
+    .input-row {
+        padding: 14px 12px;
+        height: 48px;
+        border-radius: 8px;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .input-row input {
+        font-size: 16px;
+    }
+
+    .input-row .icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .cta-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .btn-primary {
+        padding: 14px 20px;
+        border-radius: 8px;
+        font-weight: 700;
+        flex: 0 0 auto;
+    }
+
+    .recent-link {
+        display: block;
+        font-size: 16px;
+        text-underline-offset: 8px;
+    }
+
+    .date-wrapper {
+        display: none;
+    }
+
+    .suggest-section .suggest-container {
+        margin: 12px auto 0;
+        padding: 0 26px;
+    }
+
+    .suggest-section .suggest-container li:nth-child(4),
+    .suggest-section .suggest-container li:nth-child(5) {
+        display: none;
+    }
+
+    .suggest-section #suggest-title {
+        margin: 0 0 14px;
+        font-size: 28px;
+        line-height: 1.15;
+    }
+
+    .suggest-section .suggest-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .suggest-section .suggest-card {
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 12px;
+        padding: 16px;
+        min-height: 132px;
+        border-radius: 14px;
+        background: #f5f5f5;
+    }
+
+    .suggest-section .card-title {
+        margin: 0 0 6px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .suggest-section .card-text {
+        margin: 0 0 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        color: #333;
+    }
+
+    .suggest-section .card-cta {
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: #fff;
+        font-weight: 600;
+    }
+
+    .suggest-section .card-media {
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .suggest-section .card-media img {
+        max-width: 112px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .reserve-section .reserve-grid {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 18px;
+    }
+
+    .reserve-section .reserve-container {
+        min-width: 0;
+        min-height: auto;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 28px 22px;
+        border-radius: 14px;
+    }
+
+    .reserve-section .reserve-media {
+        display: none;
+    }
+
+    .reserve-section {
+        padding: 24px 24px 32px;
+        margin: 24px 0 8px;
+    }
+
+    .reserve-section .reserve-primary-container {
+        padding-inline: 0;
+    }
+
+    .reserve-section .reserve-title {
+        font-size: 32px;
+        margin-bottom: 18px;
+    }
+
+    .reserve-section .reserve-headline {
+        font-size: 28px;
+        margin: 0 0 32px;
+    }
+
+    .reserve-section .reserve-sub {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .reserve-section .reserve-form {
+        max-width: none;
+    }
+
+    .reserve-section .reserve-wrapper {
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+
+    .reserve-section .reserve-input {
+        height: 48px;
+        padding: 0 12px;
+        border-radius: 12px;
+    }
+
+    .reserve-section .reserve-benefits {
+        padding: 16px;
+    }
+
+    .reserve-section .benefit-item {
+        padding: 12px 0;
+    }
 }

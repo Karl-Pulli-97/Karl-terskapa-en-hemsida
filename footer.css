@@ -32,10 +32,9 @@
 }
 
 .footer-logo {
-    text-decoration: none;
     color: rgb(238, 238, 238);
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 150;
     font-family: sans-serif;
     padding-bottom: 20px;
 }
@@ -44,7 +43,7 @@
     display: inline-block;
     margin: 8px 0 20px;
     padding-bottom: 40px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 
@@ -144,8 +143,7 @@
 .footer-apps p {
     color: #cfcfcf;
     font-size: 14px;
-    margin: 0 0 8px;
-    text-align: center;
+    margin: 0 8px 8px;
 }
 
 .footer-apps ul {
@@ -184,4 +182,97 @@
     font-size: 13px;
     color: #868686;
     text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .site-footer {
+        padding: 28px 16px 40px;
+    }
+
+
+
+    .footer-appinfo {
+        margin: 64px 8px 30px;
+        padding: 0;
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.35;
+    }
+
+    .footer-logo {
+        margin: 0 8px;
+        padding-bottom: 10px;
+    }
+
+    .footer-help a {
+        margin: 20px 8px 12px;
+        padding-bottom: 20px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding: 12px 8px 16px;
+    }
+
+    .footer-column h3 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0 0 18px;
+    }
+
+    .footer-column ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-column li {
+        margin: 12px 0 12px;
+    }
+
+    .footer-wrapper {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        column-gap: 8px;
+        padding: 16px 0 20px;
+    }
+
+    .footer-social ul {
+        gap: 28px;
+        padding: 0;
+        margin: 32px 0 32px;
+    }
+
+    .footer-social a {
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer-selectors {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-selectors a {
+        padding: 10px 12px;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    .footer-apps {
+        padding: 8px 0 18px;
+    }
+
+    .footer-apps ul {
+        display: flex;
+        justify-content: flex-start;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-legal ul :not(:nth-child(2)) {
+        display: none;
+    }
 }
